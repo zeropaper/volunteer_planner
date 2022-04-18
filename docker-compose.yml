@@ -23,7 +23,7 @@ services:
     networks:
       <<: *default-network
     hostname: db
-    logging: *default-logging
+    # logging: *default-logging
     stop_grace_period: 30s
 
   django:
@@ -45,7 +45,7 @@ services:
     hostname: django
     links:
       - db
-    logging: *default-logging
+    # logging: *default-logging
     stop_grace_period: 10s
 
     environment:
